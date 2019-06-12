@@ -64,7 +64,7 @@ module.exports = {
             "clues": [
                 {
                     "id": 87697,
-                    "answer": "(Margaret) Mitchell",
+                    "answer": "Margaret Mitchell",
                     "question": "This 4'10\" author began her epic in 1926 after an injury; David O. Selznick bought the rights & the rest is history",
                     "value": 200,
                     "airdate": "2009-07-22T12:00:00.000Z",
