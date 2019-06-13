@@ -40,11 +40,27 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    this.setState()
+    fetch("http://jservice.io/api/categories/")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          console.log(result);
+          this.setState({
+            results: result
+          });
+        })
+
+      //   (error) => {
+      //     this.setState({
+      //       error
+      //     });
+      //   }
+      // )
     // Getting data from an external API
     //1. A query to /api/categories to get a set of categories
     //2. A set of queries afterwards to /api/category at each category id to get clues for that category
   }
+  
   render() {
     return (
       <div id={'app'}>

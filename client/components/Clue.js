@@ -6,13 +6,13 @@ const Clue = props => {
   if (props.selected){
       result = props.clueObject.question;
     }else if(props.answered){
-      result = <div></div>;
+      result = <div id="box"></div>;
     }else{
       result = props.clueObject.value;
     }
 
     return(
-      <div id="box" onClick={() => props.selectQuestion(props.clueObject)}>{result}</div>
+      <div class="clueValue" onClick={() => props.selectQuestion(props.clueObject)}>{result}</div>
       
   // show $ value of clue OR
   // the Clue question itself OR

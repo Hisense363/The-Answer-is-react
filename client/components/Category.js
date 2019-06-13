@@ -5,7 +5,7 @@ import Clue from './Clue';
 const Category = props => {
   return (
     <div className={'category'} data-testid="category">
-      <div>
+      <div class="title">
         {props.category.title}
       </div>
       {/* display category */}
