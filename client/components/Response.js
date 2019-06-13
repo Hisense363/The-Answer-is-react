@@ -22,7 +22,6 @@ const Response = props => {
 }
 
 Response.propTypes = {
-  recordResponse: PropTypes.func,
   submitResponse: PropTypes.func,
 }
 export default Response;

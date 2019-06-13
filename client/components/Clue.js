@@ -12,7 +12,7 @@ const Clue = props => {
     }
 
     return(
-      <div class="clueValue" onClick={() => props.selectQuestion(props.clueObject)}>{result}</div>
+      <div className="clueValue" onClick={() => props.selectQuestion(props.clueObject)}>{result}</div>
       
   // show $ value of clue OR
   // the Clue question itself OR

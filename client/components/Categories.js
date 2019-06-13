@@ -11,6 +11,7 @@ const Categories = props => {
             selectQuestion={props.selectQuestion}
             currentQuestion={props.currentQuestion}
             answeredQuestions={props.answeredQuestions}
+            key={value.id}
           />
       )}
     </div>

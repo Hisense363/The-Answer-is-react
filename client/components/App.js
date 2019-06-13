@@ -40,15 +40,29 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    fetch("http://jservice.io/api/categories/")
+    fetch("http://jservice.io/api/categories?count=100")
       .then(res => res.json())
       .then(
+
         (result) => {
-          console.log(result);
-          this.setState({
-            results: result
-          });
-        })
+          var clues = [];
+          for (let i = 0; i < 5; i++) {
+            const random = Math.floor(Math.random() * 100);
+            fetch("http://jservice.io/api/category?id=" + result[random].id)
+              .then(res => res.json())
+              .then((result) => {
+                clues.push(result);
+                this.setState(prevState => {
+                  return {results: clues}
+                });
+              })
+              }
+          }
+      )}
+
+        
+
+        
 
       //   (error) => {
       //     this.setState({
@@ -59,7 +73,6 @@ export default class App extends Component {
     // Getting data from an external API
     //1. A query to /api/categories to get a set of categories
     //2. A set of queries afterwards to /api/category at each category id to get clues for that category
-  }
   
   render() {
     return (
